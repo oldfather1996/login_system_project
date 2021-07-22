@@ -1,0 +1,32 @@
+.content {
+  width: 300px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 10px;
+}
+.content form{
+    text-align: center;
+}
+.signup-input {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 15px;
+  height: 25px;
+  padding-left: 5px;
+  background: #e7e7e7;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+.signup-register{
+  font-size: 15px;
+  height: 25px;
+  padding: 0 10px;
+  border: 1px solid #757575;
+  background-color: #ff6472;
+  color: #fff;
+  cursor: pointer;
+}
+.signup-register:hover{
+    opacity: 0.6;
+}
