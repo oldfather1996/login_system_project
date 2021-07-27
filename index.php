@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,26 +10,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page Login System</title>
     <link rel="stylesheet" href="./asset/css/style.css">
-    
+
 </head>
 
 <body class="home index">
     <div class="warp">
-        <nav class="nav nav-custom">
-            <h1 class="home-login">Login</h1>
-            <form action="" class="form-signin">
-                <input required class="login-input" type="text" placeholder="Username/Email" name="user_account">
-                <input required class="login-input" type="password" placeholder="password" name="user_password">
-                <button class="login-button" type="submit">Login</button>
-            </form>
-            <a href="signup.php" class="btn btn-red signup">Register</a>
-        </nav>
+        <?php
+        include_once './includes/navbar.php'
+        ?>
         <section>
             <h3>Home</h3>
+            <?php
+            if (isset($_SESSION['u_id'])) {
+                echo "<h1> U are loggin</h1>";
+            }
+            ?>
         </section>
-        <footer>
-            <p>Desgin by <a href="#">Dung An</a></p>
-        </footer>
+        <?php
+        include_once './includes/footer.php';
+        ?>
     </div>
 </body>
 

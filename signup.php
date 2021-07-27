@@ -13,31 +13,25 @@
 
 <body class="home index">
     <div class="warp">
-        <nav class="nav nav-custom">
-            <h1 class="home-login">Login</h1>
-            <form action="" class="form-signin">
-                <input required class="login-input" type="text" placeholder="Username/Email" name="user_account">
-                <input required class="login-input" type="password" placeholder="password" name="user_password">
-                <button class="login-button" type="submit">Login</button>
-            </form>
-            <a href="signup.php" class="btn btn-red signup">Register</a>
-        </nav>
+        <?php
+        include_once './includes/navbar.php'
+        ?>
         <section>
             <h3>Sign Up</h3>
             <div class="content">
-                <form action="">
-                    <input class="signup-input" type="text" placeholder="First Name" name="user_first">
-                    <input class="signup-input" type="text" placeholder="Last Name" name="user_last">
-                    <input class="signup-input" type="email" placeholder="Email" name="user_email">
-                    <input class="signup-input" type="text" placeholder="Account" name="user_account">
-                    <input class="signup-input" type="password" placeholder="Password" name=" user_password">
-                    <button class="signup-register" type="submit"> Register</button>
+                <form action="./database/db_signup.php" method="POST">
+                    <input require class="signup-input" type="text" placeholder="First Name" name="user_first">
+                    <input require class="signup-input" type="text" placeholder="Last Name" name="user_last">
+                    <input require class="signup-input" type="email" placeholder="Email" name="user_email">
+                    <input require class="signup-input" type="text" placeholder="Account" name="user_account">
+                    <input require class="signup-input" type="password" placeholder="Password" name=" user_password">
+                    <button class="signup-register" name="submit" type="submit"> Register</button>
                 </form>
             </div>
         </section>
-        <footer>
-            <p>Desgin by <a href="#">Dung An</a></p>
-        </footer>
+        <?php
+        include_once './includes/footer.php';
+        ?>
     </div>
 </body>
 
